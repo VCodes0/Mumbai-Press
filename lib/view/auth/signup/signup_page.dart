@@ -21,11 +21,10 @@ class _SignupPageState extends State<SignupPage> {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: FocusScope.of(context).unfocus,
-      child: Scaffold(
-        backgroundColor: Colors.white,
-        body: SafeArea(
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SingleChildScrollView(
+        child: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: mq.width * 0.06),
             child: Column(
@@ -91,7 +90,9 @@ class _SignupPageState extends State<SignupPage> {
                 ),
                 SizedBox(height: mq.height * 0.012),
                 Text(
-                  isSignup ? "Sign up to get started" : "Login to your account",
+                  isSignup
+                      ? "Sign up to get started"
+                      : "Login to your account",
                   style: TextStyle(
                     fontSize: mq.width * 0.04,
                     color: Colors.grey,

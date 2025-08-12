@@ -11,9 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     mq = MediaQuery.of(context).size;
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SplashPage(),
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: GetMaterialApp(
+        title: "Mumbai Press",
+        debugShowCheckedModeBanner: false,
+        home: SplashPage(),
+      ),
     );
   }
 }
