@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../main.dart';
-import '../auth/signup/signup_page.dart';
+import '../main.dart';
+import 'language_screen.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -16,9 +16,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    Timer.periodic(Duration(seconds: 2), (timer) {
-      Get.to(() => SignupPage());
-    });
+    Timer(Duration(seconds: 2), () => Get.to(() => LanguageScreen()));
   }
 
   @override
@@ -27,7 +25,7 @@ class _SplashPageState extends State<SplashPage> {
       body: SizedBox(
         width: mq.width,
         height: mq.height,
-        child: Image.asset("assets/images/splash.jpg"),
+        child: Center(child: Image.asset("assets/images/splash.jpg")),
       ),
     );
   }

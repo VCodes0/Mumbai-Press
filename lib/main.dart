@@ -1,8 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'view/splash/splash_page.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'view/splash_page.dart';
 
 late Size mq;
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -16,7 +20,17 @@ class MyApp extends StatelessWidget {
       child: GetMaterialApp(
         title: "Mumbai Press",
         debugShowCheckedModeBanner: false,
-        home: SplashPage(),
+        theme: ThemeData(
+          textTheme: GoogleFonts.ralewayTextTheme(),
+          appBarTheme: AppBarTheme(
+            surfaceTintColor: CupertinoColors.white,
+            centerTitle: true,
+            elevation: 0,
+            backgroundColor: CupertinoColors.white,
+          ),
+          scaffoldBackgroundColor: CupertinoColors.white,
+        ),
+        home: const SplashPage(),
       ),
     );
   }
