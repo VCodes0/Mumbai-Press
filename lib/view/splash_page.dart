@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../main.dart';
-import 'language_screen.dart';
+import 'home_screen.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -16,7 +16,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 2), () => Get.to(() => LanguageScreen()));
+    Timer(const Duration(seconds: 2), () => Get.off(() => const HomeScreen()));
   }
 
   @override

@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mumbai_press/view/home_screen.dart';
 
 import '../../main.dart';
 import '../../widget/lang_btn.dart';
 import '../../widget/mp_button.dart';
-import 'home_Screen.dart';
 
 class LanguageScreen extends StatelessWidget {
   const LanguageScreen({super.key});
@@ -62,7 +62,7 @@ class LanguageScreen extends StatelessWidget {
             MpButton(
               text: "Done",
               onPressed: () {
-                Get.to(() => HomePage());
+                Get.to(() => HomeScreen());
               },
             ),
             SizedBox(height: mq.height * 0.02),

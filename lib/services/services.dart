@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mumbai_press/services/terms.dart';
-import 'package:mumbai_press/view/home_Screen.dart';
+import 'package:mumbai_press/view/home_screen.dart';
 import 'package:mumbai_press/widget/drawer_btn.dart';
 import '../main.dart';
 import 'about_us.dart';
@@ -22,7 +22,7 @@ class AllServices extends StatelessWidget {
               child: Image.asset("assets/images/logo.png", fit: BoxFit.contain),
             ),
             SizedBox(height: mq.height * .02),
-            DrawerBtn(text: "Home", onTap: () => Get.offAll(() => HomePage())),
+            DrawerBtn(text: "Home", onTap: () => Get.offAll(() => const HomeScreen())),
             Divider(),
             DrawerBtn(
               text: "Terms",
@@ -34,9 +34,7 @@ class AllServices extends StatelessWidget {
               onTap: () => Get.to(() => AboutUsScreen()),
             ),
             Divider(),
-            DrawerBtn(text: "Contact Us", onTap: () {
-              
-            }),
+            DrawerBtn(text: "Contact Us", onTap: () {}),
             Divider(),
             DrawerBtn(text: "Disclaimer", onTap: () {}),
             Divider(),
