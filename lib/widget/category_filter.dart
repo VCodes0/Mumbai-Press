@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/news_controller.dart';
-import '../model/menu_model.dart';
 
 class CategoryFilter extends StatelessWidget {
   final NewsController controller;
 
-  const CategoryFilter({
-    super.key,
-    required this.controller,
-  });
+  const CategoryFilter({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +15,7 @@ class CategoryFilter extends StatelessWidget {
       }
 
       final menuItems = controller.menuData.value!.items ?? [];
-      
+
       return Container(
         height: 50,
         margin: const EdgeInsets.symmetric(vertical: 8),
@@ -36,11 +32,11 @@ class CategoryFilter extends StatelessWidget {
                 onTap: () => controller.clearSearch(),
               );
             }
-            
+
             final menuItem = menuItems[index - 1];
             final categoryId = menuItem.categoriesId;
             final isSelected = controller.selectedCategory.value == categoryId;
-            
+
             return _buildCategoryChip(
               title: menuItem.title ?? 'Unknown',
               isSelected: isSelected,
